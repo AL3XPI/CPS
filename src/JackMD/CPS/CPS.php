@@ -5,6 +5,8 @@ namespace JackMD\CPS;
 
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
+/** @var pocketmine\Player $player */
+$clicks = $cps->getClicks($player);
 
 class CPS extends PluginBase{
 	
@@ -20,6 +22,7 @@ class CPS extends PluginBase{
 	 * @param Player $player
 	 * @return int
 	 */
+	
 	public function getClicks(Player $player): int{
 		if(!isset($this->clicks[$player->getLowerCaseName()])){
 			return 0;
